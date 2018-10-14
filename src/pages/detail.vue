@@ -11,7 +11,8 @@
                         <!-- <li v-for="item in products">
                             <a v-bind:href="item.url">{{item.name}}</a>
                         </li> -->
-                        <router-link v-for="item in products" :key="item.key" :to="{path:item.path}"
+                        <router-link v-for="item in products" :key="item.key" 
+                            :to="{path:item.path}"
                             tag="li" active-class="active">
                             {{item.name}}
                         </router-link>
@@ -31,12 +32,7 @@
 </template>
 
 <script>
-    import { Slider, SliderItem } from 'vue-easy-slider'
     export default {
-        components: {
-            Slider,
-            SliderItem
-        },
         //模拟数据
         data(){
             return {
@@ -86,7 +82,6 @@
 </script>
 
 <style scoped>
-
 a{
     color:black;
 }
@@ -142,6 +137,5 @@ li:hover{
     margin-left: 20px;
     width: 55%;
 }
-
 
 </style>

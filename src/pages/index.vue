@@ -9,7 +9,7 @@
                         <h3>{{product.title}}</h3>
                         <ul>
                             <li v-for="item in product.list">
-                                <a v-bind:href="item.url">{{item.name}}</a>
+                                <a :href="item.url">{{item.name}}</a>
                                 <!-- HOT标记 样式 -->
                                 <span v-if="item.hot">HOT</span>
                             </li>
@@ -23,13 +23,14 @@
                     <h2>最新消息</h2>
                     <ul>
                         <li v-for="item in newsList">
-                            <a v-bind:href="item.url">{{item.title}}</a>
+                            <a :href="item.url">{{item.title}}</a>
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div class="mainRight">
+                <!-- vue-awesome轮播插件 实现 -->
                 <div class="silder">
                     <slider animation="normal" height='400px'>
                         <slider-item v-for="(i, index) in list" :key="index">
@@ -63,6 +64,7 @@
 </template>
 
 <script>
+    //vue-awesome轮播插件 先用npm安装,再引入
     import { Slider, SliderItem } from 'vue-easy-slider'
     export default {
         components: {

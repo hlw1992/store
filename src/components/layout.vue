@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="app-header">
+      <!-- 点击图片可跳转 -->
       <router-link :to="{path: '/'}">
         <img src="../assets/logo.png" alt="">
       </router-link>
@@ -104,7 +105,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
   *{margin: 0;padding: 0;}
   ul,li,ol{list-style:none}

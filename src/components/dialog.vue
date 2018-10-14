@@ -16,7 +16,6 @@ export default {
             default:false
         }
     },
-    // name: 'myDialog',
     data(){
         return{
             
